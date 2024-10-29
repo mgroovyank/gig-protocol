@@ -9,6 +9,7 @@ import FrameComponent from "./components/frame-component";
 import Footer from "./components/footer";
 import styles from "./index.module.css";
 import { useActiveAccount } from "thirdweb/react";
+import Banner from "./components/landing/banner";
 
 const NewlandingDesktop = () => {
   const account = useActiveAccount();
@@ -16,7 +17,8 @@ const NewlandingDesktop = () => {
   return (
     <div className={styles.newlandingDesktop}>
       {/* <NavbarSpacer /> */}
-      <FrameComponent9 />
+      {/* <FrameComponent9 /> */}
+      <Banner />
       <main className={styles.newlandingDesktopInner}>
         <section className={styles.frameParent}>
           <FrameComponent7 />
