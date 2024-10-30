@@ -40,7 +40,7 @@
 .newlandingDesktop {
   width: 100%;
   position: relative;
-  background-color: var(--light);
+  /* background-color: var(--light); */
   overflow: hidden;
   flex-direction: column;
   gap: var(--gap-29xl);
