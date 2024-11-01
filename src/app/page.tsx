@@ -6,12 +6,14 @@ import FrameComponent5 from "./components/frame-component5";
 import FrameComponent3 from "./components/frame-component3";
 import FrameComponent1 from "./components/frame-component1";
 import FrameComponent from "./components/frame-component";
-import Footer from "./components/footer";
 import styles from "./index.module.css";
 import { useActiveAccount } from "thirdweb/react";
 import Banner from "./components/landing/banner";
 import AboutTop from "./components/landing/about-top";
 import NoFees from "./components/landing/no-fees";
+import AboutBottom from "./components/landing/about-bottom";
+import HowTo from "./components/landing/how-to";
+import Footer from "./components/landing/footer";
 
 const NewlandingDesktop = () => {
   const account = useActiveAccount();
@@ -23,18 +25,21 @@ const NewlandingDesktop = () => {
       <Banner />
       <AboutTop />
       <NoFees />
+      <AboutBottom />
+      <HowTo />
       <main className={styles.newlandingDesktopInner}>
         <section className={styles.frameParent}>
           {/* <FrameComponent7 /> */}
           {/* <FrameComponent5 /> */}
-          <FrameComponent3 />
-          <div id="roadmap" className={styles.roadMapWrapper}>
+          {/* <FrameComponent3 /> */}
+          {/* <div id="roadmap" className={styles.roadMapWrapper}>
             <h1 className={styles.roadMap}>Road Map</h1>
-          </div>
-          <FrameComponent1 />
-          <FrameComponent />
+          </div> */}
+          {/* <FrameComponent1 />
+          <FrameComponent /> */}
         </section>
       </main>
+      {/* <Footer /> */}
       <Footer />
     </div>
   );
