@@ -27,18 +27,18 @@ const NewlandingDesktop = () => {
       <NoFees />
       <AboutBottom />
       <HowTo />
-      <main className={styles.newlandingDesktopInner}>
+      {/* <main className={styles.newlandingDesktopInner}>
         <section className={styles.frameParent}>
-          {/* <FrameComponent7 /> */}
-          {/* <FrameComponent5 /> */}
-          {/* <FrameComponent3 /> */}
-          {/* <div id="roadmap" className={styles.roadMapWrapper}>
+          <FrameComponent7 />
+          <FrameComponent5 />
+          <FrameComponent3 />
+          <div id="roadmap" className={styles.roadMapWrapper}>
             <h1 className={styles.roadMap}>Road Map</h1>
-          </div> */}
-          {/* <FrameComponent1 />
-          <FrameComponent /> */}
+          </div>
+          <FrameComponent1 />
+          <FrameComponent />
         </section>
-      </main>
+      </main> */}
       {/* <Footer /> */}
       <Footer />
     </div>
