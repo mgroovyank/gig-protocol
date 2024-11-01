@@ -11,6 +11,7 @@ import styles from "./index.module.css";
 import { useActiveAccount } from "thirdweb/react";
 import Banner from "./components/landing/banner";
 import AboutTop from "./components/landing/about-top";
+import NoFees from "./components/landing/no-fees";
 
 const NewlandingDesktop = () => {
   const account = useActiveAccount();
@@ -21,10 +22,11 @@ const NewlandingDesktop = () => {
       {/* <FrameComponent9 /> */}
       <Banner />
       <AboutTop />
+      <NoFees />
       <main className={styles.newlandingDesktopInner}>
         <section className={styles.frameParent}>
           {/* <FrameComponent7 /> */}
-          <FrameComponent5 />
+          {/* <FrameComponent5 /> */}
           <FrameComponent3 />
           <div id="roadmap" className={styles.roadMapWrapper}>
             <h1 className={styles.roadMap}>Road Map</h1>
