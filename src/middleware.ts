@@ -2,7 +2,8 @@ import { NextResponse } from "next/server";
 import { NextRequest } from "next/server";
 import { getPayload, isLoggedIn } from "./app/actions/login";
 import { CLIENT, FREELANCER } from "./constants/appConstants";
-import { decodeJWT } from "thirdweb/utils";
+// import { decodeJWT } from "thirdweb/utils";
+import { jwtDecode } from "jwt-decode";
 
 /**
  * This function can be marked `async` if using `await` inside
@@ -17,11 +18,19 @@ export async function middleware(request: NextRequest) {
 
   // Get user id and role from jwt
   const jwtObject = request.cookies.get("jwt");
+  console.log(request.cookies);
+  console.log("jwt decode:", jwtObject);
+
   if (jwtObject == undefined) {
     return NextResponse.redirect(new URL("/", request.url));
   }
-  const jwt = decodeJWT(request.cookies.get("jwt")?.value as string);
-  const ctx: JWTContext = jwt.payload.ctx as JWTContext;
+
+  // const jwt = decodeJWT(request.cookies.get("jwt")?.value as string);
+  const jwt = jwtDecode(request.cookies.get("jwt")?.value as string);
+  console.log("jwt decode:", jwt);
+  // const ctx: JWTContext = jwt.payload.ctx as JWTContext;
+  const ctx = jwt.ctx;
+
   const userId = ctx.userId;
   const role = ctx.role;
 
