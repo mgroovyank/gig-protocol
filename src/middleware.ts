@@ -11,7 +11,7 @@ import { jwtDecode } from "jwt-decode";
  * @author mgroovyank (MAYANK CHHIPA)
  */
 export async function middleware(request: NextRequest) {
-  console.log("---------------Inside Middleware!!----------------");
+  console.log("---------------Inside Latest Middleware!!----------------");
 
   const pathname = request.nextUrl.pathname;
   const isSignInPage = pathname == "/sign-in" ? true : false;
